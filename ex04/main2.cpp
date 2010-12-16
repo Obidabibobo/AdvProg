@@ -58,5 +58,9 @@ int main(int argc, char* argv[]){
 	for_each(vec_words.begin(),vec_words.end(),PrintVec<string>());
 	  cout << endl;
     
+    filestr.open(argv[2],fstream::out);
+    for ( vector<string>::iterator it=vec_words.begin() ; it < vec_words.end(); ++it )
+        filestr << *it << " ";
+    filestr.close();
 	return 0;	
 }
